@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./homeStyle.css">
+  <link rel="stylesheet" href="./introduction.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+  <script src="./config/config.js"></script>
+  <script src="./js/params.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/sendFirebase.js"></script>
+  <script src="./js/math.js"></script> -->
+  <script src="./js/params.js"></script>
+  <script src="./js/introAnimation.js"></script>
+</head>
+
+<body>
+
+  <div class="blue transition front parent home  ">
+
+    <div class="transition moonUp moonDescription white blueFont">
+      <p>Est une exploration sonore de l’espace</p>
+    </div>
+    <div>
+
+    </div>
+    <div class="transition moonDown moonDescription white blueFont">
+      <p>Eloignez vous<br> de votre coté
+        ambiance
+        partager</p>
+        <div id="switch">
+          <p id="go"><a href="chooseUser.html">go</a></p>
+          <div id="point1" class="transition number moveLeft ">
+            <h1>1</h1>
+          </div>
+          <div id="point2" class="transition number moveLeft ">
+            <h1></h1>
+          </div>
+        </div>
+     
+    </div>
+  </div>
+  <div id="earthBeats">
+    <h1 class="transition">earth</h1>
+    <h1 class="transition">beats</h1>
+  </div>
+  <a id="linkToDesk" href="desk.html?DESK">desk</a>
+</body>
+
+
+</html>
+<script>
+
+
+</script>
+<style>
+  #desk p {
+    left: 0;
+    margin-left: 2vw;
+    width: 13%;
+  }
+  #linkToDesk {
+      position: fixed;
+      display: none;
+      pointer-events: none;
+      z-index: 100;
+    }
+  @media only screen and (min-width: 992px) {
+    #linkToDesk {
+      position: fixed;
+      display: block;
+      pointer-events: initial;
+      z-index: 100;
+    }
+  }
+</style>

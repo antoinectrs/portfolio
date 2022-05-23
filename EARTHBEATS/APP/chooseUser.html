@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./homeStyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+  <script src="./config/config.js"></script>
+  <script src="./js/params.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/sendFirebase.js"></script>
+  <script src="./js/math.js"></script>
+</head>
+
+<body class="blue">
+  <div class="front parent home ">
+
+
+
+    <div class="list div1">
+      <a href="user.html?A">
+        <h1>Charlie</h1>
+      </a>
+      <h1>robin</h1>
+    </div>
+
+
+    <div id="sendMessage" class="list div2">
+      <a href="user.html?B">
+        <h1>morgan</h1>
+      </a>
+      <h1>jackie</h1>
+      <p id="reset" onclick="resetFirebase()">reset</p>
+      <!-- <a id="desk" href="desk.html?DESK">
+        <p>demo</p>
+      </a> -->
+    </div>
+
+
+  </div>
+  <div id="earthBeats">
+      <h1 class="transition">name?</h1>
+    </div>
+</body>
+
+
+</html>
+<script>
+  function resetFirebase() {
+    //RESET USER
+    SEND_MESSAGE(false, "beatspace/A/isUsing");
+    SEND_MESSAGE(false, "beatspace/B/isUsing");
+
+    // RESET LOCATION 
+
+    SEND_MESSAGE(0, "beatspace/A/loc/lat");
+    SEND_MESSAGE(0, "beatspace/A/loc/lon");
+
+    SEND_MESSAGE(0, "beatspace/B/loc/lat");
+    SEND_MESSAGE(0, "beatspace/B/loc/lon");
+  }
+</script>
+<style>
+  #desk p {
+    left: 0;
+    margin-left: 2vw;
+    width: 13%;
+
+  }
+  #earthBeats {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+}
+#earthBeats h1:first-child {
+    top: 38%;
+    font-size: 22vw;
+    margin: 0;
+    text-transform: uppercase;
+}
+.isUse{
+    background: none!important;
+    pointer-events: none;
+}
+</style>

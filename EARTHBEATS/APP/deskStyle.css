@@ -1,0 +1,86 @@
+.slider {
+  position: absolute;
+  top: 47vh;
+  width: 100%;
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+.animation.div1 {
+  transform: translate(0, -50%);
+}
+
+.animation.div2 {
+  transform: translate(0, 20%);
+}
+
+.animation {
+  border-radius: 100%;
+  height: 150%!important;
+}
+
+.slider1 {
+  -webkit-appearance: none;
+  width: 83%;
+  height: 2px;
+  background: #000;
+  outline: none;
+  transform: translateY(5%)
+}
+
+/* for chrome/safari */
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2vh;
+  height: 2vh;
+  background: #000;
+  cursor: pointer;
+  /* border: 5px solid lawngreen; */
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.slider1::-webkit-slider-thumb:hover {
+  width: 3vh;
+  height: 3vh;
+  background: #000;
+  /* border: 5px solid lawngreen; */
+  border-radius: 100%;
+}
+
+/* for firefox */
+
+.slider1::-moz-range-thumb {
+  width: 20px;
+  height: 60px;
+  background: #000;
+  cursor: pointer;
+}
+
+/* input[type="button"] { */
+
+button {
+  appearance: none;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+}
+button img{
+  width: 68%;
+  margin-left: 7%;
+  margin-top: 13%;
+}
+
+
+.infinite_fade {
+  border-radius: 2px;
+}
+.infinite_fade:hover{
+  border-radius: 24px;
+}

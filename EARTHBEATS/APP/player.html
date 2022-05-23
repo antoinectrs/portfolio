@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Reasonably clever tap-tempo</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+  <script src="./config/config.js"></script>
+</head>
+
+<body>
+  <div class="front parent">
+
+
+    <div class="group div1">
+      <h1 class="bigtitle">FEW YOKOTA</h1>
+      <input type="button" onclick="sample.toggle();" value="Play/Pause">
+      Drums <input id="lead" type="range" min="0" max="100" value="50" oninput="sample.crossfade(this);"> Organ</p>
+    </div>
+
+    <div id="sendMessage" class="group div2">
+
+      <p id="location"></p>
+      <h1 class="bottom_element bigtitle">FIELD YOKOTA</h1>
+    </div>
+  </div>
+  <!-- <script  src="./js/graphic.js"></script> -->
+  <!-- <script src="./js/vitesse.js"></script> -->
+  <!-- <script src="./js/tempo.js"></script> -->
+  <!-- <script src="./js/mouseTest.js"></script> -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="./js/params.js"></script>
+  <script src="./js/shared.js"></script>
+
+  <script src="./js/crossfade-sample.js"></script>
+
+  <script src="./js/fader.js"></script>
+  <!-- <script src="./js/soundModify.js"></script> -->
+  <script src="./js/loca.js"></script>
+  <script src="./js/sendFirebase.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/math.js"></script>  
+</body>
+
+
+</html>
+<script>
+  //  
+  document.getElementById("sendMessage").addEventListener("touchstart", sendMessage);
+
+  var sample = new CrossfadeSample();
+  function translatecircle(val) {
+    const transConvert = mapRange(val, 0, 480, 30, 80);
+    // console.log(document.querySelector('#track1'));
+    //     // console.log(document.querySelector('parent'));
+    // console.log(transConvert.toFixed(0))
+    document.querySelector('#track1').style.transform = "translate(0," + transConvert.toFixed(0) + "%)";
+    // document.querySelector('#track1').style.transform = "translate(0,80%)";
+    //     // document.getElementById("#animate-this-element").style.transform = "rotate(7deg)";
+    //     return transConvert;
+  }
+</script>

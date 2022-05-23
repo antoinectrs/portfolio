@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./homeStyle.css">
+  <link rel="stylesheet" href="./deskStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+  <script src="./config/config.js"></script>
+
+
+</head>
+
+<body>
+  <div class="front parent home ">
+
+    <div class="group div1">
+      <a >
+        <h1 class="">Charlie</h1>
+      </a>
+    </div>
+    <div id="sendMessage" class="group div2">
+      <a>
+        <h1 class="">Willi</h1>
+      </a>
+      <!-- <p id="reset" onclick="resetFirebase()">reset</p> -->
+    </div>
+    <div class="slider">
+      <!-- <input type="button" onclick="sample.toggle(); animation();" value="Play/Pause"> -->
+      <button class="transition infinite_fade" onclick="sample.toggle();sample.crossfade(20)"><img src="../font/play-button.png"></button>
+      <!-- <input class="infinite_fade" type="button" onclick="sample.toggle();sample.crossfade(20)"> -->
+      <div id="overlay"></div>
+      <p>Close</p>
+      <!-- <input type="range" min="0" max="100" value="0" class="slider1" id="myRange" oninput="animation(this.value);sample.crossfade(this);"> -->
+      <input type="range" min="0" max="100" value="0" class="slider1" id="myRange" oninput="animation(this.value);sharePositionSlider(this.value)">
+      <!-- <input type="range" min="0" max="100" value="0" class="slider1" id="myRange" oninput="animation(this.value);sample.crossfade(this.value);sharePositionSlider(this.value)"> -->
+      <!-- <input type="button"  onclick="sample2.toggle();">
+      <div id="overlay"></div>
+      <p>Close</p>
+      <input type="range" min="0" max="100" value="0" class="slider1" id="myRange" 
+      oninput="animation(this);
+      sample2.crossfade(this);
+      "> -->
+      <p>Far</p>
+    </div>
+
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="./js/params.js"></script>
+  <script src="./js/shared.js"></script>
+
+  <script src="./js/graphic.js"></script>
+  <script src="./js/crossfade-sample.js"></script>
+  <script src="./js/fader.js"></script>
+  <!-- <script src="./js/soundModify.js"></script> -->
+  <script src="./js/sendFirebase.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/math.js"></script>
+
+</body>
+
+
+</html>
+<script>
+  var sample = new CrossfadeSample();
+  var sample2 = new CrossfadeSample();
+  function resetFirebase() {
+    //RESET USER
+    SEND_MESSAGE(false, "beatspace/A/isUsing");
+    SEND_MESSAGE(false, "beatspace/B/isUsing");
+
+    // RESET LOCATION 
+
+    SEND_MESSAGE(0, "beatspace/A/loc/lat");
+    SEND_MESSAGE(0, "beatspace/A/loc/lon");
+
+    SEND_MESSAGE(0, "beatspace/B/loc/lat");
+    SEND_MESSAGE(0, "beatspace/B/loc/lon");
+  }
+
+</script>

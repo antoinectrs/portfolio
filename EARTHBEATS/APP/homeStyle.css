@@ -1,0 +1,117 @@
+.home h1 {
+    margin-bottom: 50%;
+    margin-top: 50%;
+}
+
+.home .div1 {
+    background: #0053ff;
+}
+
+.home .div1 h1 {
+    color: white;
+    /* mix-blend-mode: color-burn; */
+}
+
+.home .div2 {
+    background: rgb(0, 255, 0);
+}
+
+.home .div2 h1 {
+    color: white;
+    /* mix-blend-mode: unset; */
+}
+
+.home .div2 p {
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    font-size: 4vw;
+    margin-right: 2vw;
+    color: white
+    /* mix-blend-mode: color-burn; */
+}
+
+.home a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.parent {
+    background: ghostwhite;
+}
+
+.isUse #reset {
+    pointer-events: all!important;
+}
+
+.parent .group {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+    /* transition: height 2s,transform 2s,border-radius 2s ease-out; */
+    height: 100%;
+}
+
+.parent .list {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+    /* transition: height 2s,transform 2s,border-radius 2s ease-out; */
+    padding-top: 10%;
+    height: 90%;
+}
+
+.list.div1 h1 {
+    color: #0053fe;
+    background: white;
+    padding-top: 6%!important;
+    padding-bottom: 6%!important;
+    margin: 0;
+}
+
+.list.div2 h1 {
+    color: #0053fe;
+    background: white;
+    padding-top: 6%!important;
+    padding-bottom: 6%!important;
+    margin: 0;
+}
+
+.list.div2 {
+    background: #0053fe;
+}
+
+.list.div1 {
+    background: #0053fe;
+}
+
+#validation {
+    position: absolute;
+    background: none;
+    border: solid 2px white;
+    border-radius: 200px;
+    height: 9%;
+    width: 41%;
+    font-size: 10vw;
+    color: white;
+    font-family: "Ginto-Bold";
+}
+
+#tempBackground {
+    width: 100%;
+    height: 100%;
+    background: #001DB6;
+    opacity: 0.81;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    position: fixed;
+    align-items: center;
+}
+.transition {
+    transition: 0.4s ease;
+}
