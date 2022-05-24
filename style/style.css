@@ -1,122 +1,111 @@
 @font-face {
     font-family: modern;
     src: url(./self.otf);
-  }
+}
+
 @font-face {
     font-family: italic;
     src: url(./italic.otf);
-  }
-  h1{
+}
+
+h1 {
     margin: 0;
     font-weight: normal;
-  }
-  body{
-      margin:0;
-      font-family: modern;
-      font-weight: normal;
-  }
-  * {
+}
+
+body {
+    margin: 0;
+    font-family: modern;
+    font-weight: normal;
+}
+
+* {
     box-sizing: border-box;
-  }
-  
-  .flex-container {
+}
+
+.flex-container {
     display: flex;
     flex-wrap: wrap;
     font-size: 25px;
     text-align: center;
-  }
-  
-  .flex-item-left {
+}
+
+.flex-item-left {
     /* background-color: #f1f1f1; */
     padding: 5px;
     flex: 50%;
-  }
-  .flex-item-right h1 {
-   font-family: italic;
-   font-weight: normal;
-  }
-  .flex-item-right {
+}
+
+.flex-item-right h1 {
+    font-family: italic;
+    font-weight: normal;
+}
+
+.flex-item-right {
     /* background-color: dodgerblue; */
     padding: 5px;
     flex: 50%;
-  }
-  .flex-mid {
+}
+
+.flex-mid {
     /* background-color: dodgerblue; */
     padding: 5px;
     flex: 33.33%;
     /* display: flex; */
     height: 100%;
-
-  }
-  a {  
-      text-decoration: none;
-      color: rgb(26, 26, 26);
-  }
-  a:hover {  
-   font-family: italic;
 }
-  .menu{
-      position: absolute;
-      display: flex;
-      width: 76.3%;
-      margin-left: 11.7%;;
-      /* height: 90%; */
-      /* margin-top: 5%; */
-      /* border: 1px solid; */
-      /* border-radius: 1%; */
-      /* background: red; */
-     justify-content: center;
-     }
-  .name{
-    border-bottom:1px solid;
-  }
-  /* Responsive layout - makes a one column-layout instead of a two-column layout */
-  @media (max-width: 950px) {
+
+a {
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+a:hover {
+    font-family: italic;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    width: 76.3%;
+    margin-left: 11.7%;
+    ;
+    /* height: 90%; */
+    /* margin-top: 5%; */
+    /* border: 1px solid; */
+    /* border-radius: 1%; */
+    /* background: red; */
+    justify-content: center;
+}
+
+.name {
+    border-bottom: 1px solid;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+
+/* @media (max-width: 950px) {
     .flex-item-right, .flex-item-left {
-      flex: 100%;
+        flex: 100%;
     }
-    .flex-mid{
+    .flex-mid {
         flex: 100%;
-        border-top:1px solid;
-      }
-      .name{
-          border-bottom:none;
-        }
-        /* .flex-container {
-          font-size: 55px;
-        } */
-  }
-  /* Portrait and Landscape */
-@media only screen 
-and (min-device-width: 414px) 
-and (max-device-width: 736px) 
-and (-webkit-min-device-pixel-ratio: 3) { 
-    .flex-item-right, .flex-item-left {
-        flex: 100%;
-      }
-      .flex-mid{
-          flex: 100%;
-          border-top:1px solid;
-        }
-        .name{
-            border-bottom:none;
-          }
-}
-/* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .flex-item-right, .flex-item-left {
-        flex: 100%;
-      }
-      .flex-mid{
-          flex: 100%;
-          border-top:1px solid;
-        }
-        .name{
-            border-bottom:none;
-          }
+        border-top: 1px solid;
+    }
+    .name {
+        border-bottom: none;
+    }
+} */
 
+@media only screen and (hover: none) and (pointer: coarse) {
+    .flex-item-right, .flex-item-left {
+        flex: 100%;
+    }
+    .flex-mid {
+        flex: 100%;
+        border-top: 1px solid;
+    }
+    .name {
+        border-bottom: none;
+    }
 }
