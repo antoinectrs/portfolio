@@ -80,6 +80,7 @@ a:hover {
     margin-left: 5%;
     overflow: scroll;
     height: 75%;
+    -ms-overflow-style: none;
 
 }
 .menu {
