@@ -84,4 +84,7 @@
     .name{
         border-bottom:none;
       }
+      .flex-container {
+        font-size: 55px;
+      }
   }
