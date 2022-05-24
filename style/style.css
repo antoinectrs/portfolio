@@ -36,10 +36,15 @@ body {
     padding: 5px;
     flex: 50%;
 }
-
-.flex-item-right h1 {
-    /* font-family: italic;
-    font-weight: normal; */
+.flex-container h1 {
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+}
+ .flex-container #first {
+    animation-name: type;
+}
+.flex-container #seconde {
+    animation-name: reversType;
 }
 
 .flex-item-right {
@@ -101,7 +106,16 @@ a:hover {
     text-align: center;
 }
 .content::-webkit-scrollbar { width: 0 !important }
-
+@keyframes type {
+    0% {font-family: italic;}
+    50% {font-family: modern;}
+    100% {font-family: italic;}
+  }
+@keyframes reversType {
+    0% {font-family: modern;}
+    50% {font-family: italic;}
+    100% {font-family: modern;}
+  }
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 
 @media (max-width: 950px) {
